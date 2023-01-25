@@ -420,6 +420,7 @@ body {
 .customers-item-link:hover,
 .customers-item-link:focus {
   border-color: var(--present-state-color);
+  outline: none;
 }
 
 .customers-item-icon {
@@ -430,6 +431,7 @@ body {
 .customers-item-link:hover .customers-item-icon,
 .customers-item-link:focus .customers-item-icon {
   fill: var(--present-state-color);
+  /* outline: none; */
 }
 
 /* -----------FOOTER---------------- */
@@ -491,7 +493,8 @@ body {
 
 .footer-soc-link:hover,
 .footer-soc-link:focus {
-  background-color: var();
+  background-color: var(--success-color);
+  outline: none;
 }
 
 .footer-soc-icon {
@@ -523,7 +526,6 @@ body {
 .footer-subscribe-email {
   width: 264px;
   height: 40px;
-
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -715,6 +717,7 @@ body {
 .modal-close:focus {
   background-color: var(--present-state-color);
   border-color: var(--present-state-color);
+  outline: none;
 }
 
 .modal-close:active .modal-close-icon,
@@ -737,22 +740,17 @@ body {
   margin-bottom: 14px;
 }
 
-.modal-form {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  justify-content: left;
-}
-
-.modal-form-thumb {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.modal-form-label {
+  font-size: 12px;
+  line-height: 1.17px;
+  letter-spacing: 0.01em;
+  color: var(--subtle-text-color);
 }
 
 .modal-input-thumb {
   position: relative;
+  margin-bottom: 8px;
+  margin-top: 4px;
 }
 
 .modal-input {
@@ -767,11 +765,7 @@ body {
 .modal-input:hover,
 .modal-input:focus {
   border-color: var(--primary-brand-color);
-}
-
-.modal-input:hover + .modal-icon,
-.modal-input:focus + .modal-icon {
-  fill: var(--primary-brand-color);
+  outline: none;
 }
 
 .modal-icon {
@@ -782,21 +776,16 @@ body {
   fill: var(--dark-color);
 }
 
-.modal-form-label {
-  font-size: 12px;
-  line-height: 1.17px;
-  letter-spacing: 0.01em;
-  color: var(--subtle-text-color);
+.modal-input:hover + .modal-icon,
+.modal-input:focus + .modal-icon {
+  fill: var(--primary-brand-color);
 }
 
-.modal-form-label {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--subtle-text-color);
-}
 .modal-textarea {
+  width: 100%;
   height: 120px;
+  margin-top: 4px;
+  margin-bottom: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 16px;
@@ -810,6 +799,7 @@ body {
 .modal-textarea:hover,
 .modal-textarea:focus {
   border-color: var(--primary-brand-color);
+  outline: none;
 }
 
 textarea::placeholder {
@@ -819,20 +809,25 @@ textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.modal-checkbox-thumb {
+  width: 100%;
+}
+
 .modal-privacy-lable {
   display: flex;
-  width: 338px;
+  width: 339px;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: #757575;
+  justify-content: space-between;
 }
 
 .modal-privacy-lable span {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-right: 8px;
+  align-items: center;
+  margin-right: 6px;
   fill: transparent;
   width: 16px;
   height: 16px;
@@ -858,8 +853,10 @@ textarea::placeholder {
 }
 
 .modal-form-send {
+  display: block;
   width: 168px;
   margin: 0 auto;
+  margin-top: 24px;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
